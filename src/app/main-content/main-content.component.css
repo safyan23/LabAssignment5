@@ -2,6 +2,9 @@
     float:right;
 }
 
+.main-outlet{
+    display: none;
+}
 
 
 .main-container-grid {

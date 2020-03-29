@@ -1,6 +1,14 @@
+.nav-buttons {
+    margin-right:10px;
+}
+
 .main-header{
     
     display: grid;
     grid-template-columns: 1fr 6fr 2fr;
     height: 9vh;
+}
+
+.toolbar{
+    height: 100%;
 }

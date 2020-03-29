@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-header',
@@ -7,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
-  private firstName: string;
-  private lastName: string;
+  firstName = 'Safyan';
+  lastName = 'Iqbal';
+  greeting = 'r1c2';
 
-  constructor() {
-    this.firstName = 'Safyan';
-    this.lastName = 'Iqbal';
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit() {
   }
-
 
   showGreeting() {
     const banner = document.getElementById('banner');
@@ -26,7 +29,8 @@ export class MainHeaderComponent implements OnInit {
     banner.innerHTML = 'r1c2';
   }
 
-  ngOnInit() {
-  }
+navigateTo(path: string) {
+  this.router.navigate([path]);
+}
 
 }
