@@ -1,5 +1,16 @@
-<header class="main-header">
+<!-- <header class="main-header">
     <span class="align-center">r1c1</span>
     <div id="banner" class="align-center" (mouseenter)="showGreeting()" (mouseleave)="hideGreeting()">r1c2</div>
     <div class="align-center">r1c3</div>
-</header>
+</header> -->
+
+<mat-toolbar color="warn">
+<mat-toolbar-row class="main-header">
+    <span class="align-center">r1c1</span>
+    <div id="banner" class="align-center" (mouseenter)="showGreeting()" (mouseleave)="hideGreeting()">r1c2</div>
+    <div class="align-center">
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </div>
+</mat-toolbar-row>
+</mat-toolbar>
