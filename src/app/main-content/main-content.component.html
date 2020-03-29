@@ -8,6 +8,7 @@
         <button type="button" class="btn btn-info">Info</button>
         <button type="button" class="btn btn-light">Light</button>
         <button type="button" class="btn btn-dark">Dark</button> -->
+
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -17,9 +18,13 @@
                     <th scope="col">Courses</th>
                     <th>
                         <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-success" (click)="saveStudent()">Save</button>
-                            <button type="button" class="btn btn-info" [disabled]="disableAddButton"
-                                (click)="addStudent()">Add</button>
+                            <button type="button" mat-raised-button color="accent" (click)="saveStudent()">
+                                <mat-icon >save_edit</mat-icon>
+                            </button>
+                            <button type="button" mat-raised-button color="warn" [disabled]="disableAddButton"
+                                (click)="addStudent()">
+                                <mat-icon>create</mat-icon>
+                            </button>
                         </div>
                     </th>
                 </tr>
@@ -35,7 +40,8 @@
                         <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID">
                     </th>
                     <td *ngIf="student.editMode">
-                        <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="First Name">
+                        <input [(ngModel)]="student.firstName" type="text" class="form-control"
+                            placeholder="First Name">
                     </td>
                     <td *ngIf="student.editMode">
                         <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name">
@@ -44,7 +50,11 @@
                         <input [(ngModel)]="student.course" type="text" class="form-control" placeholder="Course">
                     </td>
 
-                    <td><button type="button" class="btn btn-danger pull-right" (click)="removeStudent(i)">X</button>
+                    <td>
+                        <button type="button" class="pull-right" mat-raised-button color="warn"
+                            (click)="removeStudent(i)">
+                            <mat-icon>delete_sweep</mat-icon>
+                        </button>
                     </td>
                 </tr>
             </tbody>
