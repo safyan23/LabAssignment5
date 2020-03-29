@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LabAssignment3"
+    }
+  },
+  "defaultProject": "LabAssignment3",
+  "cli": {
+    "analytics": false
+  }
 }
